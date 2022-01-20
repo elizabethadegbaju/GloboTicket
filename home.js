@@ -8,7 +8,7 @@ const Home = (props) => {
         <View style={styles.container}>
             <Image
                 style={styles.globologo}
-                source={require('.images/logo_large.png')}
+                source={require('./images/logo_large.png')}
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
             <Text style={styles.subtitle}>{props.username}</Text>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     content: {
         fontFamily: "Ubuntu-Light",
-        fontWeight: 300
+        fontWeight: "300"
     }
 })
 
