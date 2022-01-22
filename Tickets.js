@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from "react-native";
 import globoTickets from "./TicketsDB";
 
-const Tickets = () => {
+const Tickets = ({ navigation }) => {
     const ticketItem = ({ item }) => {
         return (
             <View style={styles.tickets}>
@@ -35,11 +35,16 @@ const Tickets = () => {
                     >
                         Price: ${item.price}
                     </Text>
-                    <Text
-                        style={styles.ticketButton}
+                    <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate("TicketPurchase", { ticketId: item.eventId })
+                        }}
+                        style={styles.button}
                     >
-                        GET TICKETS
-                    </Text>
+                        <Text style={styles.ticketButton}>
+                            GET TICKETS
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

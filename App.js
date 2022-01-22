@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './home';
 import Tickets from './Tickets';
 import Contact from './Contact';
+import TicketPurchase from './TicketPurchase';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,15 @@ const App: () => Node = () => {
               headerTitleAlign: "center",
               headerTitleStyle: { fontFamily: "Ubuntu-Regular" },
               headerTitle: "Contact Us"
+            }}
+          />
+          <Stack.Screen
+            name='TicketPurchase'
+            component={TicketPurchase}
+            options={{
+              headerTitleAlign: "center",
+              headerTitleStyle: { fontFamily: "Ubuntu-Regular" },
+              headerTitle: "Purchase Ticket"
             }}
           />
         </Stack.Navigator>
