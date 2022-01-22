@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
-
+import Menu from "./menu";
 
 
 const Home = (props) => {
@@ -12,31 +12,29 @@ const Home = (props) => {
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
             <Text style={styles.subtitle}>{props.username}</Text>
+            <Image
+                style={styles.heroImage}
+                source={require('./images/logo_large.png')}
+            />
             <View style={styles.textcontainer}>
                 <Text style={styles.content}>{introText}</Text>
+            </View>
+            <View style={styles.menu}>
+                <Menu />
             </View>
         </View>
     );
 }
 
-const introText = `Happy New Year To All of us and Welcome to 2022.
-We hope you all had time to unwind during the break and hopefully it was 
-worth it. The EID group is slightly over a year now, and it’s great to see 
-how we slowly have been able to meet other eagles and share with one 
-another through various meetings over time. It is also great to see that 
-last year some members of the group were able to meet up one way or the 
-other which is great!!
-
-Hopefully this year we are able to have more regionally meetings outside of 
-our virtual meetups, and perhaps find even more useful information and 
-people amongst ourselves that add to one or two important areas of our 
-lives here.`
+const introText = `Are you ready for the best events? Whether you are into sports, music, or the most amazing seminars we have got you covered. Get ready to purchase great tickets at the best prices. Events are in-person and virtual.`
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: "column",
         alignItems: "center",
-        padding: 20
+        paddingTop: 20,
+        paddingBottom:20,
+        flex:1
     },
     globologo: {
         height: 100,
@@ -50,12 +48,19 @@ const styles = StyleSheet.create({
         fontFamily: "Ubuntu-Regular"
     },
     textcontainer: {
-        textAlign: "center",
-        paddingTop: 10
+        paddingTop: 20
     },
     content: {
         fontFamily: "Ubuntu-Light",
         fontWeight: "300"
+    },
+    heroImage:{
+        height: 170,
+        width: "100%"
+    },
+    menu: {
+        position:"absolute",
+        bottom:10
     }
 })
 
