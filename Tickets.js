@@ -33,7 +33,7 @@ const Tickets = () => {
                     <Text
                         style={styles.ticketShortDescription}
                     >
-                        Prices: ${item.price}
+                        Price: ${item.price}
                     </Text>
                     <Text
                         style={styles.ticketButton}
