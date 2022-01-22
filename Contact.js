@@ -47,6 +47,7 @@ const Contact = ({ navigation }) => {
                 onChangeText={email => setFormEmail(email)}
                 value={formEmail}
                 selectTextOnFocus={true}
+                keyboardType="email-address"
             />
             <Text style={styles.labels}>
                 Phone Number:
@@ -56,6 +57,7 @@ const Contact = ({ navigation }) => {
                 onChangeText={phoneNumber => setFormPhoneNumber(phoneNumber)}
                 value={formPhoneNumber}
                 selectTextOnFocus={true}
+                keyboardType="phone-pad"
             />
             <Text style={styles.labels}>
                 Message: *required
