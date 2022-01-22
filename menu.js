@@ -10,7 +10,7 @@ const Menu = () => {
                 onPress={() => navigation.navigate('Tickets')}
                 style={styles.button}
             >
-                <Text style={styles.buttonText}></Text>
+                <Text style={styles.buttonText}>Events</Text>
             </TouchableOpacity>
         </View>
     );
