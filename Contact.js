@@ -82,7 +82,6 @@ const Contact = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-    labels: {},
     form: {
         alignItems: "center",
         flexDirection: "column",
