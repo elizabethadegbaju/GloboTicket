@@ -8,13 +8,13 @@ const Home = (props) => {
         <View style={styles.container}>
             <Image
                 style={styles.globologo}
-                source={require('./images/logo_large.png')}
+                source={require('./images/globoticket.png')}
             />
             <Text style={styles.title}>Welcome to GloboTicket</Text>
             <Text style={styles.subtitle}>{props.username}</Text>
             <Image
                 style={styles.heroImage}
-                source={require('./images/logo_large.png')}
+                source={require('./images/boxing.jpg')}
             />
             <View style={styles.textcontainer}>
                 <Text style={styles.content}>{introText}</Text>
