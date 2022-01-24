@@ -7,6 +7,7 @@ import Home from './home';
 import Tickets from './Tickets';
 import Contact from './Contact';
 import TicketPurchase from './TicketPurchase';
+import News from './News';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,15 @@ const App: () => Node = () => {
               headerTitleAlign: "center",
               headerTitleStyle: { fontFamily: "Ubuntu-Regular" },
               headerTitle: "Purchase Ticket"
+            }}
+          />
+          <Stack.Screen
+            name='News'
+            component={News}
+            options={{
+              headerTitleAlign: "center",
+              headerTitleStyle: { fontFamily: "Ubuntu-Regular" },
+              headerTitle: "Recent News"
             }}
           />
         </Stack.Navigator>
